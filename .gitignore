@@ -1,2 +1,6 @@
 .env
 smartmeal/config.py
+smartmeal/cafeteria-predictor/config.py
+smartmeal/config.py
+smartmeal/config.py
+cafeteria-predictor/.env

@@ -65,5 +65,5 @@ while current <= end_date:
         rows.append([date_str, weekday_kor, rain_or_snow, temp, menu, soup, count])
     current += timedelta(days=1)
 
-df = pd.DataFrame(rows, columns=["날짜", "요일", "눈 또는 비 여부", "온도", "메인메뉴", "국의 이름", "실제 식사했던 인원"])
+df = pd.DataFrame(rows, columns=["날짜", "요일", "눈 또는 비 여부", "온도", "메인메뉴", "국의 이름", "실제 식사 인원"])
 df.to_csv("past_data.csv", index=False, encoding="utf-8-sig")

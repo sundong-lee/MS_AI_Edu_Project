@@ -1,0 +1,6 @@
+streamlit
+pandas
+prophet
+azure-storage-blob
+openai
+python-dotenv

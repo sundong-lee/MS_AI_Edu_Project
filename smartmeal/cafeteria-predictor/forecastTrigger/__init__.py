@@ -6,13 +6,7 @@ from forecast import forecast_meal_count
 from data_utils import load_csv
 from blob_utils import upload_blob
 
-app = func.FunctionApp()
-
-@app.function_name(name="forecastTrigger")
-@app.blob_trigger(arg_name="myblob",
-                  path="cafeteria/{name}",
-                  connection="AzureWebJobsStorage")
-def run_forecast(myblob: func.InputStream):
+def main(myblob: func.InputStream):
     logging.info(f"📦 Blob trigger: {myblob.name}, Size: {myblob.length} bytes")
 
     try:
