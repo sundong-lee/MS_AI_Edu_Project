@@ -34,6 +34,7 @@ def apply_adjustments(df):
             continue
 
         # 최종 식수 인원 조정
-        adjusted.at[i, "예측 식수 인원"] = max(0, round(base * factor))
+        adjusted_value = round(base * factor)
+        adjusted.at[i, "예측 식수 인원"] = max(0, int(adjusted_value))
 
     return adjusted

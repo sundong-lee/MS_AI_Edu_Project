@@ -31,6 +31,9 @@ def run_prediction():
     forecast_df = forecast[["ds", "yhat"]].rename(columns={"ds": "날짜", "yhat": "예측 식수 인원"})
     forecast_df["날짜"] = forecast_df["날짜"].dt.strftime("%Y-%m-%d")
 
+    # 여기서 정수 변환 추가
+    forecast_df["예측 식수 인원"] = forecast_df["예측 식수 인원"].round().astype(int)
+
     # 5. future 메뉴/날씨/요일 병합
     result_df = forecast_df.merge(future_menu_df, on="날짜")
     result_df = result_df.merge(future_weather_df, on="날짜")

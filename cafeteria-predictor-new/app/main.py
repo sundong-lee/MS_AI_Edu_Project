@@ -42,7 +42,17 @@ if st.button("📊 식수 예측 실행"):
 
         # 3. 운영자 챗 입력 반영
         if user_input:
-            result_df = process_chat(user_input, result_df)
+            explanation, adjusted_df = process_chat(user_input, result_df)
+            st.success("✅ 운영자 입력 반영 완료")
+
+            # GPT 설명 출력
+            st.markdown(f"**💬 GPT 응답:**\n\n{explanation}")
+
+            # 조정된 결과 테이블 출력
+            st.dataframe(adjusted_df)
+
+            # 필요 시 result_df 업데이트
+            result_df = adjusted_df
 
         # 4. 결과 저장
         timestamp = datetime.now().strftime("%Y%m%d%H")
