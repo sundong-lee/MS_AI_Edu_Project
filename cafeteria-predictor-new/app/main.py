@@ -10,11 +10,11 @@ from datetime import datetime
 import pandas as pd
 
 st.set_page_config(page_title="급식 식수 예측 서비스", layout="wide")
-#st.title("🍱 대규모 급식 식수 예측 AI 서비스")
+#st.title("🍱 대규모 급식 식수 예측 AI")
 st.markdown(
     """
     <div style="display: flex; align-items: center;">
-        <h1 style="margin: 0;">대규모 급식 식수 예측 AI 서비스</h1>
+        <h2 style="margin: 0;">대규모 급식 식수 예측 AI</h2>
         <div style="margin-left: auto;">
             <h5 style="margin: 0; color: gray;">AM BD팀 이선동</h5>
         </div>
@@ -75,5 +75,17 @@ if st.button("📊 식수 예측 실행"):
         # 5. 결과 표시
         st.success("✅ 예측 완료! 아래에 결과를 표시합니다.")
         st.dataframe(result_df)
+
+         # 👉 CSV 변환 (메모리 상에서)
+        csv_bytes = result_df.to_csv(index=False).encode("utf-8")
+
+        # 👉 다운로드 버튼 (결과가 있을 때만 노출)
+        st.download_button(
+            label="📥 예측 결과 CSV 다운로드",
+            data=csv_bytes,
+            file_name="prediction.csv",
+            mime="text/csv"
+    )
+
     else:
         st.warning("⚠️ 두 개의 CSV 파일을 모두 업로드해주세요.")
