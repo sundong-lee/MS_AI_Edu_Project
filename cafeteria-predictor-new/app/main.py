@@ -13,10 +13,21 @@ st.set_page_config(page_title="급식 식수 예측 서비스", layout="wide")
 #st.title("🍱 대규모 급식 식수 예측 AI")
 st.markdown(
     """
+    <style>
+    h1.custom-title {
+        font-size: 2rem;   /* 모바일에서도 고정 크기 */
+        white-space: nowrap;  /* 줄바꿈 방지 */
+    }
+    h3.custom-subtitle {
+        font-size: 1rem;
+        color: gray;
+        white-space: nowrap;
+    }
+    </style>
     <div style="display: flex; align-items: center;">
-        <h2 style="margin: 0;">대규모 급식 식수 예측 AI</h2>
+        <h2 class="custom-title">🍱 대규모 급식 식수 예측 AI 서비스</h2>
         <div style="margin-left: auto;">
-            <h5 style="margin: 0; color: gray;">AM BD팀 이선동</h5>
+            <h6 class="custom-subtitle">AM BD팀 이선동</h6>
         </div>
     </div>
     """,
