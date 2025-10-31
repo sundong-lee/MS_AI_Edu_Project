@@ -83,9 +83,9 @@
    * 공휴일/주말 - 운영 안 함 -> 예측 제외 - 영향도 0
 
 12. 동작화면
-   ![예측1](predict1.jpg)
-   ![예측2](predict2.jpg)   
-
+   ![alt text](predict1-1.JPG)
+   ![alt text](predict2-1.JPG)
+   
 13. 향후 확장 아이디어
    * 농산물 가격 API 연동 → 메뉴 추천 최적화
    * 영양소 데이터베이스 연계 → 건강식단 자동 추천
@@ -94,3 +94,6 @@
 
  
  
+
+
+[def]: predict1.jpg
