@@ -32,7 +32,7 @@
        - 예측 작업 시작일 기준 2주일 날씨 및 온도 요소 반영하여 예측 데이터 수정 변경
        - 1차 데이터 기준 급식사이트 운영관리자의 그 날 그 날 추가 데이터를 반영하여 1차 예측데이터 수정 변경
     * 구현
-       - Azure Blob, Azure OpenAI
+       - Azure Blob, Azure OpenAI, Azure webapp, Azure Funtion App, streamlit
 
 7. UI 및 데이터파일 구성
    * 화면상단 왼쪽에 과거 1년치의 날짜별 실제 식사했던 식수인원과 그 날의 서울 서초구 방배동의 낮 12시 기준 날씨(눈 또는 비 여부/온도)정보, 실제 제공됬던 주요메뉴 2가지로 구성된 past_data.CSV파일 업로드 버튼
