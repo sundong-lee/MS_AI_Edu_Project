@@ -12,7 +12,7 @@ def apply_adjustments(df):
 
         # 날씨 영향
         if row["눈 또는 비 여부"] in ["눈", "비"]:
-            factor += 0.1  # 이용율 증가
+            factor += 0.2  # 이용율 증가
         # 온도 영향
         temp = row["온도"]
         if 15 <= temp <= 27:

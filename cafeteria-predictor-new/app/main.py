@@ -23,9 +23,10 @@ with col2:
 
 with col3:
     if st.button("☁️ 날씨 정보 가져오기"):
-        weather_df = fetch_weather_data()
-        upload_to_blob("future_weather.csv", weather_df)
-        st.success("✅ 날씨 정보 저장 완료")
+        with st.spinner("⏳ 날씨 정보를 불러오는 중입니다..."):
+            weather_df = fetch_weather_data()
+            upload_to_blob("future_weather.csv", weather_df)
+            st.success("✅ 날씨 정보 저장 완료")
 
 # --- 챗 입력 영역 ---
 user_input = st.text_input("💬 식수 관련 문의를 입력하세요")
@@ -42,7 +43,8 @@ if st.button("📊 식수 예측 실행"):
 
         # 3. 운영자 챗 입력 반영
         if user_input:
-            explanation, adjusted_df = process_chat(user_input, result_df)
+            with st.spinner("💡 GPT가 식수 예측을 조정 중입니다... 잠시만 기다려주세요."):
+                explanation, adjusted_df = process_chat(user_input, result_df)
             st.success("✅ 운영자 입력 반영 완료")
 
             # GPT 설명 출력
