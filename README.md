@@ -1,7 +1,8 @@
 ## MS_AI_Edu_Project                            AM BD팀 이선동 
 ### MVP제작
  1. 프로젝트명
-    * 대규모 급식사이트의 식수 예측 AI서비스 (https://pro-lsd-webapp.azurewebsites.net/)
+    * 대규모 급식사이트의 식수 예측 AI서비스 
+    * https://pro-lsd-webapp.azurewebsites.net/
 
  2. 배경
     * 대규모 급식의 경우 여러 가지 원인으로 예측된 식수에 맞게 준비작업이 되지 않는 경우가 발생
