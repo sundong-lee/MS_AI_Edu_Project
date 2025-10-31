@@ -10,7 +10,18 @@ from datetime import datetime
 import pandas as pd
 
 st.set_page_config(page_title="급식 식수 예측 서비스", layout="wide")
-st.title("🍱 대규모 급식 식수 예측 AI 서비스")
+#st.title("🍱 대규모 급식 식수 예측 AI 서비스")
+st.markdown(
+    """
+    <div style="display: flex; align-items: center;">
+        <h1 style="margin: 0;">대규모 급식 식수 예측 AI 서비스</h1>
+        <div style="margin-left: auto;">
+            <h3 style="margin: 0; color: gray;">AM BD팀 이선동</h3>
+        </div>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 # --- 파일 업로드 영역 ---
 col1, col2, col3 = st.columns(3)
@@ -29,7 +40,7 @@ with col3:
             st.success("✅ 날씨 정보 저장 완료")
 
 # --- 챗 입력 영역 ---
-user_input = st.text_input("💬 식수 관련 추가 조정 요인을 이야기 하세요")
+user_input = st.text_input("💬 챗GPT에게 식수 관련 추가 조정 요인을 이야기 하세요")
 
 # --- 예측 실행 버튼 ---
 if st.button("📊 식수 예측 실행"):
