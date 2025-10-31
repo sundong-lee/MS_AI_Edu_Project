@@ -10,7 +10,7 @@ def render_upload_section():
         future_file = st.file_uploader("📂 2주일치 메뉴 데이터 업로드", type="csv")
 
     with col3:
-        weather_clicked = st.button("☁️ 날씨 정보 가져오기")
+        weather_clicked = st.button("☁️ 2주일치 날씨 정보 가져오기")
 
     return past_file, future_file, weather_clicked
 

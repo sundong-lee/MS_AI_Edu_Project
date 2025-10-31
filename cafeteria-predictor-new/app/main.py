@@ -22,7 +22,7 @@ with col2:
     future_file = st.file_uploader("📂 2주일치 메뉴 데이터 업로드", type="csv")
 
 with col3:
-    if st.button("☁️ 날씨 정보 가져오기"):
+    if st.button("☁️ 2주일치 날씨 정보 가져오기"):
         with st.spinner("⏳ 날씨 정보를 불러오는 중입니다..."):
             weather_df = fetch_weather_data()
             upload_to_blob("future_weather.csv", weather_df)
