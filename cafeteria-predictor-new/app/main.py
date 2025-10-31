@@ -16,7 +16,7 @@ st.markdown(
     <div style="display: flex; align-items: center;">
         <h1 style="margin: 0;">대규모 급식 식수 예측 AI 서비스</h1>
         <div style="margin-left: auto;">
-            <h3 style="margin: 0; color: gray;">AM BD팀 이선동</h3>
+            <h5 style="margin: 0; color: gray;">AM BD팀 이선동</h5>
         </div>
     </div>
     """,

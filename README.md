@@ -83,7 +83,10 @@
    * 공휴일/주말 - 운영 안 함 -> 예측 제외 - 영향도 0
 
 12. 동작화면
+   * 식수 예측 
    ![alt text](predict1-1.JPG)
+
+   * chat GPT를 통한 추가 조정 
    ![alt text](predict2-1.JPG)
    
 13. 향후 확장 아이디어
@@ -92,8 +95,4 @@
    * SaaS 형태로 외부 기업 구내식당 서비스화
    * Power BI 연계 → 경영진 보고용 대시보드
 
- 
- 
 
-
-[def]: predict1.jpg
